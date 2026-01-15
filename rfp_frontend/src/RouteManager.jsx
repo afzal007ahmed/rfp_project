@@ -7,10 +7,12 @@ import GeneratedRfp from './pages/GeneratedRfp'
 import History from './pages/History'
 import HistoryAll from './pages/HistoryAll'
 import Reply from './pages/Reply'
+import Home from './pages/Home'
 
 const RouteManager = () => {
   return (
     <Routes>
+      <Route path='/' element={<Home/>} />
         <Route path='/vendors'  element={<Vendors/>} />
         <Route path='/rfp' element={<Rfp/>} />
         <Route path='/generatedrfp/:prompt' element={<GeneratedRfp/>} />
