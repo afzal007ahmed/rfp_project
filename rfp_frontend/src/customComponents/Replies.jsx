@@ -52,6 +52,7 @@ const Replies = ({ reply, email, best }) => {
           className="p-6 border rounded-sm mb-5 bg-gray-200"
         >
           {best && best?.bestVendor.bestMessageId === item.messageId &&  <p className="font-bold text-sm bg-green-500 p-2 w-fit rounded-sm text-white mb-3">BEST PROPOSAL</p>}
+          {best && best?.bestVendor.bestMessageId === item.messageId && best?.vendors.length &&  <p className="font-bold text-sm bg-green-500 p-2 w-fit rounded-sm text-white mb-3">{ best.vendors[ 0 ].summary}</p>}
           <div className="flex justify-between w-full gap-3">
             <p className="text-sm mb-6 font-medium">
               <span className="font-bold mr-2">From :</span> {item.from}
